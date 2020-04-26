@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <img src="images/logo.svg" alt="gameLogo">
+      <div id="score">
+        <h6>SCORE</h6>
+        <div id="result">0</div>
+      </div>  
+  </header>
+  <main>
+    <section id="gameOptions">
+      <div class="element" id="paper" onclick="elementIsClicked(this)">
+        <div class="imgContainer" id="paperContainer">
+          <img src="images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      <div class="element" id="scissors" onclick="elementIsClicked(this)">
+        <div class="imgContainer" id="scissorsContainer">
+          <img src="images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+      <div class="element " id="rock" onclick="elementIsClicked(this)">
+        <div class="imgContainer" id="rockContainer">
+          <img src="images/icon-rock.svg" alt="rock">
+        </div>
+      </div>  
+    </section>
+    <section id="game">
+      <div id="headers">
+        <p id="first">You Picked</p>
+        <p id="second">The House Picked</p>
+      </div>
+         <div id="player">
+         </div>
+         <div id="gameResult">
+           <p id="message"></p>
+            <input type="button" value="Play again" id="tryAgainButton" onclick="clickButton()">
+         </div>
+         <div id="computer">
+         </div>
+    </section>
+    <div id="rulesImg">
+      <img id="myImg" src="images/image-rules.svg" alt="rules" style="width:100%;max-width:300px">
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+      <input type="button" value="Rules" id="rules" >
+  </footer>
+  <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
